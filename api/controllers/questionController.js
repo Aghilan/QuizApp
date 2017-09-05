@@ -63,6 +63,6 @@ exports.delete_a_question = function(req, res) {
   }, function(err, question) {
     if (err)
       return res.send(err);
-    res.json({ message: 'Question successfully deleted' });
+    res.json(req.params.questionId);
   });
 };

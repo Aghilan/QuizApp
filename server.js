@@ -8,7 +8,7 @@ var express = require('express'),
 var cors = require('cors')
 
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost/Questiondb');
+mongoose.connect('mongodb://localhost/Quizdb');
 
 app.use(cors())
 
