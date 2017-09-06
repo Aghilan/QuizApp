@@ -58,11 +58,12 @@ exports.update_a_question = function(req, res) {
 Deletes the record of the question
 */
 exports.delete_a_question = function(req, res) {
+  console.log(req.body.questions);
   Question.remove({
-    _id: req.params.questionId
+    _id:{$in: req.body.questions }
   }, function(err, question) {
     if (err)
       return res.send(err);
-    res.json(req.params.questionId);
+    res.json(req.body.questions);
   });
 };

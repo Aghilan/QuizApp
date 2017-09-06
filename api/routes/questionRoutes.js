@@ -5,10 +5,11 @@ module.exports = function(app) {
 
 	app.route('/questions')
 		.get(question.list_all_question)
-		.post(question.create_a_question);
+		.post(question.create_a_question)
+		.delete(question.delete_a_question);
 
 	app.route('/questions/:questionId')
 		.get(question.read_a_question)
-		.put(question.update_a_question)
-		.delete(question.delete_a_question);
+		.put(question.update_a_question);
+		
 };
