@@ -22,7 +22,10 @@ var QuestionSchema = new Schema({
     }],
     default: ['Option 1', 'Option 2']
   },
-  img: { data: Buffer, contentType: String }
+  image: {
+    type: String,
+    default: '#'       
+  }
 });
 
 module.exports = mongoose.model('Question', QuestionSchema);
